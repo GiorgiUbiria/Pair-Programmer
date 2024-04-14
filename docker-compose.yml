@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  dev-finder-db:
+    image: postgres
+    restart: always
+    container_name: pair-programmer-db
+    ports:
+      - 7777:7777
+    environment:
+      POSTGRES_PASSWORD: asddsa16
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+
+volumes:
+  postgres:
